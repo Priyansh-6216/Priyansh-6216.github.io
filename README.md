@@ -1,4 +1,4 @@
-### https://Priyansh-6216.github.io/Priyansh-6216/ Hey there 👋 This is my portfolio
+### https://Priyansh-6216.github.io Hey there 👋 This is my portfolio
 
 <!--
 **Priyansh-6216/Priyansh-6216** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
