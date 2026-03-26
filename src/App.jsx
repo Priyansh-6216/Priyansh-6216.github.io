@@ -11,6 +11,9 @@ import AiChat from './sections/AiChat'
 import Certifications from './sections/Certifications'
 import Contact from './sections/Contact'
 import { useSmoothScroll } from './hooks/useSmoothScroll'
+import { Suspense, lazy } from 'react'
+
+const BackgroundCanvas = lazy(() => import('./components/BackgroundCanvas'))
 
 export default function App() {
   const [loaded, setLoaded] = useState(false)
@@ -19,10 +22,13 @@ export default function App() {
   return (
     <>
       <Cursor />
+      <Suspense fallback={null}>
+        <BackgroundCanvas />
+      </Suspense>
       <Loader onDone={() => setLoaded(true)} />
 
       {loaded && (
-        <div className="min-h-screen">
+        <div className="min-h-screen relative z-10">
           <Navbar />
           <main>
             <Hero />

@@ -1,9 +1,6 @@
 import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
-import { Suspense, lazy } from 'react'
 import { STATS } from '../utils/data'
-
-const HeroCanvas = lazy(() => import('../components/HeroCanvas'))
 
 const container = {
   hidden: {},
@@ -17,11 +14,6 @@ const item = {
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden" id="hero">
-      {/* Three.js BG */}
-      <Suspense fallback={null}>
-        <HeroCanvas />
-      </Suspense>
-
       {/* Radial gradient overlay */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,rgba(91,90,246,0.08)_0%,rgba(5,5,8,0.6)_70%)]" />
 
