@@ -53,6 +53,8 @@ export default function Hero() {
                 2000,
                 'shipping AI-powered products',
                 2000,
+                'architecting with Go & TypeScript',
+                2000,
                 'deploying cloud infrastructure',
                 2000,
                 'seeking new opportunities in the USA',
