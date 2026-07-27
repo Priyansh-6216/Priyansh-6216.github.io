@@ -7,27 +7,109 @@ export const NAV_LINKS = [
 ]
 
 export const SKILLS = [
-  { category: 'Languages', items: ['Java', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'C++'] },
-  { category: 'Frameworks', items: ['Spring Boot', 'React.js', 'Node.js', 'REST APIs', 'Microservices'] },
-  { category: 'Cloud & DevOps', items: ['AWS', 'Azure', 'Docker', 'Kubernetes', 'CI/CD', 'GitHub Actions'] },
-  { category: 'AI & LLM Tools', items: ['Claude API', 'Anthropic SDK', 'GitHub Copilot', 'Prompt Engineering'] },
-  { category: 'Databases', items: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis'] },
-  { category: 'Concepts', items: ['Agile/Scrum', 'OOP', 'Design Patterns', 'Distributed Systems', 'TDD'] },
+  {
+    category: 'Languages',
+    items: ['Java 17', 'Python 3.11', 'JavaScript (ES6+)', 'TypeScript 5.2', 'SQL', 'C++']
+  },
+  {
+    category: 'AI & LLM Engineering',
+    items: [
+      'GPT-4o',
+      'Anthropic Claude',
+      'Azure OpenAI',
+      'LangChain',
+      'LangGraph',
+      'LlamaIndex',
+      'Model Context Protocol (MCP)',
+      'RAG',
+      'Pinecone',
+      'pgvector',
+      'Chroma',
+      'Embedding Models',
+      'Hugging Face',
+      'Ragas',
+      'LLM-as-Judge',
+      'Prompt Engineering',
+      'LoRA Fine-Tuning'
+    ]
+  },
+  {
+    category: 'Frameworks',
+    items: [
+      'Spring Boot 3',
+      'Spring Security',
+      'Spring Data JPA',
+      'FastAPI',
+      'React 18',
+      'Redux',
+      'Node.js',
+      'REST APIs',
+      'Microservices'
+    ]
+  },
+  {
+    category: 'Cloud & DevOps',
+    items: [
+      'AWS (EC2, S3, Lambda, Bedrock)',
+      'Microsoft Azure',
+      'Docker',
+      'Kubernetes',
+      'CI/CD',
+      'GitHub Actions',
+      'Jenkins'
+    ]
+  },
+  {
+    category: 'Databases',
+    items: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis']
+  },
+  {
+    category: 'Messaging & Tools',
+    items: [
+      'Apache Kafka',
+      'Git',
+      'GitHub',
+      'Maven',
+      'Gradle',
+      'IntelliJ IDEA',
+      'Jira',
+      'Confluence',
+      'Bitbucket',
+      'Postman'
+    ]
+  },
+  {
+    category: 'Testing',
+    items: ['JUnit 5', 'Mockito', 'Selenium 4']
+  },
+  {
+    category: 'Concepts',
+    items: [
+      'Agentic AI',
+      'Agentic Workflows',
+      'Distributed Systems',
+      'Event-Driven Architecture',
+      'Agile/Scrum',
+      'OOP',
+      'Design Patterns',
+      'TDD'
+    ]
+  }
 ]
 
 export const EXPERIENCE = [
   {
-    role: 'Software Developer II',
+    role: 'Software Developer II - AI Engineer',
     company: 'Harvard Pilgrim Healthcare',
     location: 'Remote',
     period: 'Feb 2024 — Present',
     color: '#5b5af6',
     bullets: [
-      'Design and deliver scalable Java and Python backend services for enterprise healthcare systems serving thousands of daily users.',
-      'Accelerate development velocity using AI coding tools (GitHub Copilot, Claude Code) for code generation, refactoring, and automated test scaffolding.',
-      'Lead backend API design following OOP principles and RESTful best practices across distributed microservices.',
-      'Drive CI/CD pipeline improvements and automated testing workflows, reducing deployment friction and defect rates.',
-      'Proactively monitor and troubleshoot production systems using logging, observability tools, and root-cause analysis.',
+      'Build production-grade LLM applications using GPT-4o, Claude, and Azure OpenAI to automate claim summarization and intelligent healthcare support.',
+      'Develop Retrieval-Augmented Generation (RAG) pipelines with LangChain, LlamaIndex, pgvector, and Pinecone for accurate, grounded AI responses.',
+      'Engineer agentic AI workflows with LangGraph and MCP, orchestrating LLMs, APIs, databases, and enterprise tools for complex task automation.',
+      'Optimize AI systems through embedding strategies, prompt engineering, LoRA fine-tuning, and automated evaluation pipelines using Ragas.',
+      'Deploy containerized AI microservices with Java, Spring Boot, Docker, Kubernetes, and Azure while ensuring secure, scalable enterprise delivery.',
     ]
   },
   {
