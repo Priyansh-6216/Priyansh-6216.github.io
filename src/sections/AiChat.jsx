@@ -104,29 +104,43 @@ export default function AiChat() {
         throw new Error("API Key is missing. Did you add VITE_GROQ_API_KEY to your .env file?")
       }
 
-      const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`
-        },
-        body: JSON.stringify({
-          model: 'llama-3.3-70b-versatile',
-          messages: [
-            { role: 'system', content: AI_SYSTEM_PROMPT },
-            ...newHistory
-          ],
-          max_tokens: 300
-        })
-      })
-      
-      const data = await res.json()
-      
-      if (!res.ok) {
-        throw new Error(data.error?.message || `API Error: ${res.status}`)
+      const candidateModels = ['qwen/qwen3.8-27b', 'openai/gpt-oss-120b', 'openai/gpt-oss-20b']
+      let reply = null
+      let lastError = null
+
+      for (const model of candidateModels) {
+        try {
+          const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${apiKey}`
+            },
+            body: JSON.stringify({
+              model,
+              messages: [
+                { role: 'system', content: AI_SYSTEM_PROMPT },
+                ...newHistory
+              ],
+              max_tokens: 350
+            })
+          })
+
+          const data = await res.json()
+          if (res.ok && data.choices?.[0]?.message?.content) {
+            reply = data.choices[0].message.content
+            break
+          } else {
+            lastError = data.error?.message || `API Error: ${res.status}`
+          }
+        } catch (e) {
+          lastError = e.message
+        }
       }
 
-      const reply = data.choices?.[0]?.message?.content || "Sorry, I couldn't get a response. Try again!"
+      if (!reply) {
+        throw new Error(lastError || "Could not retrieve response from AI service.")
+      }
       setMessages(prev => [...prev, { role: 'assistant', content: reply }])
       setHistory(prev => [...prev, { role: 'assistant', content: reply }])
     } catch (err) {

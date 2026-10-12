@@ -9,91 +9,39 @@ export const NAV_LINKS = [
 export const SKILLS = [
   {
     category: 'Languages',
-    items: ['Java 17', 'Python 3.11', 'JavaScript (ES6+)', 'TypeScript 5.2', 'SQL', 'C++']
+    items: ['Java', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'C++']
   },
   {
-    category: 'AI & LLM Engineering',
+    category: 'AI & GenAI Engineering',
     items: [
-      'GPT-4o',
-      'Anthropic Claude',
-      'Azure OpenAI',
-      'LangChain',
-      'LangGraph',
-      'LlamaIndex',
-      'Model Context Protocol (MCP)',
-      'RAG',
-      'Pinecone',
-      'pgvector',
-      'Chroma',
-      'Embedding Models',
-      'Hugging Face',
-      'Ragas',
-      'LLM-as-Judge',
-      'Prompt Engineering',
-      'LoRA Fine-Tuning'
+      'LLMs', 'RAG', 'Vector Databases', 'Claude/Anthropic API', 'OpenAI', 'Amazon Bedrock', 'MCP', 'LangChain', 'LlamaIndex', 'LangGraph', 'Embeddings', 'Semantic Search', 'Prompt Engineering', 'AI Agents'
     ]
   },
   {
-    category: 'Frameworks',
+    category: 'Backend & Frameworks',
     items: [
-      'Spring Boot 3',
-      'Spring Security',
-      'Spring Data JPA',
-      'FastAPI',
-      'React 18',
-      'Redux',
-      'Node.js',
-      'REST APIs',
-      'Microservices'
+      'Spring Boot', 'React', 'REST APIs', 'GraphQL', 'Flask', 'Node.js', 'Microservices'
     ]
   },
   {
-    category: 'Cloud & DevOps',
+    category: 'Cloud, Infrastructure & DevOps',
     items: [
-      'AWS (EC2, S3, Lambda, Bedrock)',
-      'Microsoft Azure',
-      'Docker',
-      'Kubernetes',
-      'CI/CD',
-      'GitHub Actions',
-      'Jenkins'
+      'AWS', 'Microsoft Azure', 'GCP', 'Docker', 'Kubernetes', 'CI/CD', 'GitHub Actions', 'Jenkins', 'Terraform', 'CloudFormation'
     ]
   },
   {
-    category: 'Databases',
-    items: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis']
+    category: 'Databases & Vector Stores',
+    items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'pgvector', 'FAISS', 'Pinecone']
   },
   {
-    category: 'Messaging & Tools',
+    category: 'Messaging & SRE/Observability',
     items: [
-      'Apache Kafka',
-      'Git',
-      'GitHub',
-      'Maven',
-      'Gradle',
-      'IntelliJ IDEA',
-      'Jira',
-      'Confluence',
-      'Bitbucket',
-      'Postman'
+      'Kafka', 'Logs', 'Metrics', 'Traces', 'Anomaly Detection', 'OpenTelemetry', 'Chaos Engineering'
     ]
   },
   {
-    category: 'Testing',
-    items: ['JUnit 5', 'Mockito', 'Selenium 4']
-  },
-  {
-    category: 'Concepts',
-    items: [
-      'Agentic AI',
-      'Agentic Workflows',
-      'Distributed Systems',
-      'Event-Driven Architecture',
-      'Agile/Scrum',
-      'OOP',
-      'Design Patterns',
-      'TDD'
-    ]
+    category: 'Automation & Robotics',
+    items: ['Playwright', 'Browser Automation', 'Workflow Automation', 'Arduino', 'Sensors', 'Motor Control', 'Autonomous Navigation']
   }
 ]
 
@@ -101,15 +49,13 @@ export const EXPERIENCE = [
   {
     role: 'Software Developer II - AI Engineer',
     company: 'Harvard Pilgrim Healthcare',
-    location: 'Remote',
+    location: 'Remote (Dallas, TX)',
     period: 'Feb 2024 — Present',
     color: '#5b5af6',
     bullets: [
-      'Build production-grade LLM applications using GPT-4o, Claude, and Azure OpenAI to automate claim summarization and intelligent healthcare support.',
-      'Develop Retrieval-Augmented Generation (RAG) pipelines with LangChain, LlamaIndex, pgvector, and Pinecone for accurate, grounded AI responses.',
-      'Engineer agentic AI workflows with LangGraph and MCP, orchestrating LLMs, APIs, databases, and enterprise tools for complex task automation.',
-      'Optimize AI systems through embedding strategies, prompt engineering, LoRA fine-tuning, and automated evaluation pipelines using Ragas.',
-      'Deploy containerized AI microservices with Java, Spring Boot, Docker, Kubernetes, and Azure while ensuring secure, scalable enterprise delivery.',
+      'Backend/full-stack engineer (Java, Python, Spring Boot, React) focused on AI/GenAI engineering.',
+      'Integrate LLMs, RAG pipelines, and vector databases into production workflows.',
+      'Leverage Claude/Anthropic API, OpenAI, and other models for intelligent healthcare applications.',
     ]
   },
   {
@@ -141,44 +87,136 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
   {
-    name: 'FinGuard-AI',
-    tagline: 'Intelligent Banking Microservices',
-    description: 'Enterprise banking platform featuring Java/JS microservices, real-time AI fraud detection with Kafka, and high-availability architecture. Containerized with Docker and orchestrated for scale.',
-    stack: ['JavaScript', 'Spring Boot', 'Kafka', 'Docker', 'React'],
-    color: '#5b5af6',
-    icon: '🏦',
-    github: 'https://github.com/Priyansh-6216/FinGuard-AI-Intelligent-Banking-Microservices-Platform',
+    name: 'LLMRouter',
+    tagline: 'Intelligent LLM-Routing Platform',
+    description: 'Intelligent LLM-routing platform that selects models/providers based on request requirements, cost, performance, and routing policies.',
+    stack: ['Python', 'LLM APIs', 'Multi-model architecture', 'API routing'],
+    color: '#a78bfa',
+    icon: '🔀',
+    github: 'https://github.com/Priyansh-6216/LLMRouter',
+    featured: true,
+  },
+  {
+    name: 'SecureGenAI Gateway',
+    tagline: 'Enterprise AI Security Firewall',
+    description: 'Security gateway that protects enterprise GenAI applications by controlling, inspecting, and securing LLM requests.',
+    stack: ['Python', 'AWS', 'GenAI / LLM', 'API gateway architecture'],
+    color: '#ef4444',
+    icon: '🛡️',
+    github: 'https://github.com/Priyansh-6216/SecureGenAI_Gateway',
+    featured: true,
+  },
+  {
+    name: 'RepoMind-AI',
+    tagline: 'AI Repository Intelligence',
+    description: 'AI repository-intelligence platform that understands large codebases and lets developers search, analyze, and reason about repositories.',
+    stack: ['Python', 'LLMs', 'RAG', 'Vector search', 'Code intelligence'],
+    color: '#3b82f6',
+    icon: '🧠',
+    github: 'https://github.com/Priyansh-6216/RepoMind-AI',
+    featured: true,
+  },
+  {
+    name: 'Ciroos',
+    tagline: 'AIOps / SRE Intelligence',
+    description: 'SRE intelligence platform that analyzes logs, metrics, and traces to detect anomalies, identify likely root causes, and recommend remediation.',
+    stack: ['AI/LLM', 'Logs', 'Metrics', 'Distributed traces', 'Anomaly detection'],
+    color: '#f59e0b',
+    icon: '🚨',
+    github: 'https://github.com/Priyansh-6216/Ciroos',
     featured: true,
   },
   {
     name: 'VitalLens',
     tagline: 'Real-time Health Intelligence',
-    description: 'WHOOP-integrated biometric dashboard transforming raw health data into actionable recovery analytics. Features real-time API synchronization and robust PostgreSQL persistence.',
-    stack: ['Java', 'WHOOP API', 'PostgreSQL', 'React', 'OAuth 2.0'],
+    description: 'Real-time health and performance coaching platform that streams heart-rate data from wearables and turns it into LLM-generated coaching. Supports 3 BLE heart-rate strap brands.',
+    stack: ['Kafka', 'Spring Boot', 'WHOOP OAuth', 'LLM coaching layer', 'BLE integration'],
     color: '#4ade80',
     icon: '🧬',
     github: 'https://github.com/Priyansh-6216/vitallens',
     featured: true,
   },
   {
-    name: 'AI-Evaluation-Toolkit',
+    name: 'FinGuard-AI',
+    tagline: 'Intelligent Banking Microservices',
+    description: 'Event-driven banking platform with fraud detection and semantic search, running a local LLM.',
+    stack: ['Java', 'Spring Boot', 'Event-driven architecture', 'FAISS', 'Ollama'],
+    color: '#5b5af6',
+    icon: '🏦',
+    github: 'https://github.com/Priyansh-6216/FinGuard-AI-Intelligent-Banking-Microservices-Platform',
+    featured: true,
+  },
+  {
+    name: 'Autonomous 4WD Robotics Platform',
+    tagline: 'Arduino-powered Robotic Vehicle',
+    description: 'Arduino-powered 4WD robotic vehicle using sensors, motor control, and real-time C++ logic for autonomous obstacle-aware navigation.',
+    stack: ['C++', 'Arduino', 'Embedded systems', 'Sensors', 'Robotics'],
+    color: '#ec4899',
+    icon: '🤖',
+    github: 'https://github.com/Priyansh-6216/Autonomous-4WD-Robotics',
+  },
+  {
+    name: 'QueryMind AI',
+    tagline: 'Natural-language-to-SQL Platform',
+    description: 'Natural-language-to-SQL assistant: ask questions in plain English, get SQL back.',
+    stack: ['Python', 'GPT-4', 'SQL', 'Text-to-SQL', 'RAG'],
+    color: '#0ea5e9',
+    icon: '🔍',
+    github: 'https://github.com/Priyansh-6216/QueryMind_AI',
+  },
+  {
+    name: 'AI-Evaluation-LLM-Benchmarking-Toolkit',
     tagline: 'LLM Benchmarking & AI Quality',
-    description: 'Enterprise-grade toolkit for benchmarking LLMs. Implements automated quality control (pytest/Jest) and performance metrics to ensure model reliability in production.',
-    stack: ['Python', 'React', 'Pytest', 'Jest', 'Claude API'],
-    color: '#a78bfa',
+    description: 'Evaluation framework for measuring LLM/application quality across different models, prompts, and AI workflows.',
+    stack: ['Python', 'LLM evaluation', 'Benchmarking', 'Prompt evaluation'],
+    color: '#8b5cf6',
     icon: '⚖️',
     github: 'https://github.com/Priyansh-6216/AI-Evaluation-LLM-Benchmarking-Toolkit',
-    featured: true,
+  },
+  {
+    name: 'RootTrace',
+    tagline: 'AI-assisted RCA System',
+    description: 'AI-powered debugging platform that analyzes operational signals and traces issues back to root causes.',
+    stack: ['Python', 'Neo4j', 'LangChain', 'Observability', 'Incident analysis'],
+    color: '#10b981',
+    icon: '🔎',
+    github: 'https://github.com/Priyansh-6216/RootTrace',
+  },
+  {
+    name: 'ChaosPilot',
+    tagline: 'Chaos-engineering Platform',
+    description: 'Chaos-engineering platform for intentionally testing distributed systems and evaluating their resilience.',
+    stack: ['Python', 'Distributed systems', 'Chaos engineering', 'Failure injection'],
+    color: '#f43f5e',
+    icon: '🌪️',
+    github: 'https://github.com/Priyansh-6216/ChaosPilot',
+  },
+  {
+    name: 'CodeCritic',
+    tagline: 'AI-powered Code Review',
+    description: 'AI-powered code-review assistant that analyzes source code and provides automated quality and improvement feedback.',
+    stack: ['Python', 'LLMs', 'AI code analysis', 'Static analysis'],
+    color: '#6366f1',
+    icon: '💻',
+    github: 'https://github.com/Priyansh-6216/CodeCritic',
+  },
+  {
+    name: 'SGProof Wholesale Deal Tracker',
+    tagline: 'Automated Web-monitoring System',
+    description: 'Scrapes wholesale liquor deals daily to monitor pricing and inventory for a planned liquor store. Runs daily, tracks 100+ deals.',
+    stack: ['Python', 'Flask', 'Playwright', 'Docker', 'Railway'],
+    color: '#eab308',
+    icon: '🛒',
+    github: 'https://github.com/Priyansh-6216/SGProof-Tracker',
   },
   {
     name: 'Distributed-Microservices-Platform',
     tagline: 'High-Availability Architecture',
-    description: 'Scalable Java-based microservices ecosystem designed for distributed enterprise environments. Implements JWT authentication, rate limiting, and centralized observability.',
-    stack: ['Java', 'Spring Boot', 'Docker', 'Kubernetes', 'PostgreSQL'],
+    description: 'Distributed backend platform demonstrating scalable microservices communication, service orchestration, and cloud-native architecture.',
+    stack: ['Java', 'Spring Boot', 'Microservices', 'Docker', 'Kubernetes'],
     color: '#22d3ee',
     icon: '🌐',
     github: 'https://github.com/Priyansh-6216/Distributed-Microservices-Platform',
-    featured: true,
   },
   {
     name: 'ClaimLens',
@@ -188,58 +226,13 @@ export const PROJECTS = [
     color: '#f472b6',
     icon: '📑',
     github: 'https://github.com/Priyansh-6216/ClaimLens',
-  },
-  {
-    name: 'CloudMon',
-    tagline: 'Infrastructure Monitoring',
-    description: 'Real-time cloud resource monitoring dashboard. Analyzes AWS/Azure spending and resource health idle-state detection via native Cloud APIs.',
-    stack: ['JavaScript', 'AWS SDK', 'Azure SDK', 'React', 'Chart.js'],
-    color: '#94a3b8',
-    icon: '☁️',
-    github: 'https://github.com/Priyansh-6216/CloudMon',
-  },
-  {
-    name: 'AI Resume Tailor',
-    tagline: 'LLM-Powered Job Matching',
-    description: 'Full-stack tool that takes a job description and resume, then uses Claude API to intelligently rewrite bullet points for ATS optimization. Outputs a downloadable PDF.',
-    stack: ['React', 'Node.js', 'Claude API', 'LaTeX', 'Docker'],
-    color: '#a78bfa',
-    icon: '📄',
-    github: 'https://github.com/Priyansh-6216',
-  },
-  {
-    name: 'Cover Letter De-Slopper',
-    tagline: 'AI-Powered Writing Tool',
-    description: 'React app using the Anthropic Claude API to detect and humanize AI-generated writing/filler language. Implements prompt engineering for phrasing optimization.',
-    stack: ['React', 'Claude API', 'Prompt Engineering', 'Vite'],
-    color: '#5b5af6',
-    icon: '🤖',
-    github: 'https://github.com/Priyansh-6216',
-  },
-  {
-    name: 'Healthcare API Gateway',
-    tagline: 'Microservices Orchestration',
-    description: 'Spring Boot API gateway routing and load-balancing requests across healthcare microservices. Implements JWT auth and centralized structured logging.',
-    stack: ['Java', 'Spring Boot', 'Docker', 'PostgreSQL', 'JWT'],
-    color: '#22d3ee',
-    icon: '🏥',
-    github: 'https://github.com/Priyansh-6216',
-  },
-  {
-    name: 'Job Board Dashboard',
-    tagline: 'Apify + React Tracker',
-    description: 'React-based job tracking dashboard consuming the Apify API for live job listing aggregation. Features automated CI/CD deployment via GitHub Actions.',
-    stack: ['React', 'Apify API', 'GitHub Actions', 'GitHub Pages'],
-    color: '#4ade80',
-    icon: '📊',
-    github: 'https://github.com/Priyansh-6216',
-  },
+  }
 ]
 
 export const CERTIFICATIONS = [
   { name: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', icon: '☁️', color: '#FF9900' },
   { name: 'Microsoft Azure Fundamentals', issuer: 'AZ-900 · Microsoft', icon: '🔷', color: '#0078D4' },
-  { name: 'Claude Code in Action', issuer: 'Anthropic · Mar 2026', icon: '✦', color: '#5b5af6' },
+  { name: 'Claude Code in Action', issuer: 'Anthropic', icon: '✦', color: '#5b5af6' },
   { name: 'Certified Generative AI Expert', issuer: 'Blockchain Council', icon: '🧠', color: '#a78bfa' },
 ]
 
@@ -259,20 +252,20 @@ export const EDUCATION = [
 export const STATS = [
   { value: 3, suffix: '+', label: 'Years Exp.' },
   { value: 4, suffix: '', label: 'Certifications' },
-  { value: 12, suffix: '+', label: 'Projects' },
-  { value: 12, suffix: '+', label: 'Technologies' },
+  { value: 25, suffix: '+', label: 'Projects' },
+  { value: 25, suffix: '+', label: 'Technologies' },
 ]
 
 export const AI_SYSTEM_PROMPT = `You are an AI assistant embedded in Priyansh Suthar's interactive portfolio website. Answer questions about Priyansh concisely, professionally, and enthusiastically. Keep answers to 2-4 sentences max.
 
 ABOUT PRIYANSH:
 - Software Developer II at Harvard Pilgrim Healthcare (Feb 2024-Present), remote, Dallas TX
+- Backend/full-stack engineer (Java, Python, Spring Boot, React) focused on AI/GenAI engineering: LLM integration, RAG, vector databases, Claude/Anthropic API.
 - Previously: Full Stack SWE at Mutual of Omaha (2023-2024), Software Developer at StaTwig India (2019-2021)
 - MS Computer Science, UT Dallas (2022-2023); BE Computer Engineering, Gujarat Technological University (2017-2021)
-- Core stack: Java, Spring Boot, Python, React.js, Node.js, TypeScript, Go, PostgreSQL, MongoDB, Docker, Kubernetes, AWS, Azure, Kafka
-- AI tools: Claude API, Anthropic SDK, GitHub Copilot, Prompt Engineering
-- Certifications: AWS Cloud Practitioner, Azure AZ-900, Claude Code in Action (Mar 2026), Certified Generative AI Expert
-- Key Projects: FinGuard-AI (Banking Microservices), VitalLens (Biometric Health AI), AI-Evaluation-Toolkit (LLM Benchmarking), Distributed-Microservices-Platform, ClaimLens, CloudMon, AI Resume Tailor
+- Core stack: Java, Python, JavaScript/TypeScript, React, Spring Boot, REST APIs, microservices, Kafka, Redis, PostgreSQL, MongoDB, Neo4j, Docker, Kubernetes, AWS, Azure, Git, CI/CD, LangChain, LlamaIndex, RAG, FAISS, Pinecone, pgvector, Ollama, Claude/Anthropic API, OpenAI, Amazon Bedrock, MCP.
+- Certifications: AWS Cloud Practitioner, Azure AZ-900, Claude Code in Action, Certified Generative AI Expert
+- Portfolio Pillars: GenAI & LLM Infrastructure, AI Developer Productivity, AIOps / SRE / Distributed Systems, Applied AI, Robotics / Embedded
+- Key Projects: VitalLens, LLMRouter, FinGuard AI, QueryMind AI, SecureGenAI Gateway, RootTrace, AI-Eval-Toolkit, CodeCritic, ClaimLens, Cover Letter De-Slopper, SGProof Wholesale Deal Tracker, CartPilot, SecureSchoolForms, NexusAI, ChaosPilot, GhostTrace, OPTGuard-AI, FlowRescue, RepoMind-AI, Distributed-Microservices-Platform, CloudMon, Keytosafety, Headroom, ResumeOps AI, Ciroos, Autonomous 4WD Robotics Platform.
 - Actively seeking Full Stack, DevOps/Cloud, and AI/ML Engineering roles in the USA (remote or relocation)
-- Requires OPT/CPT or visa sponsorship
-- Contact: Priyanshdb11@gmail.com | linkedin.com/in/priyanshx | github.com/Priyansh-6216`
+- Contact: linkedin.com/in/priyanshx | github.com/Priyansh-6216 | priyansh-6216.github.io`
